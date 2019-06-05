@@ -1,0 +1,26 @@
+{
+  "name": "evolux.dynlayers",
+  "version": "1.0.0",
+  "description": "dynamic layered software stack",
+  "main": "index.js",
+  "scripts": {
+    "gendoc": "./node_modules/.bin/esdoc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thoregon/evolux.dynlayers.git"
+  },
+  "keywords": [],
+  "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thoregon/evolux.dynlayers/issues"
+  },
+  "homepage": "https://github.com/Thoregon/evolux.dynlayers#readme",
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-node": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
+  }
+}

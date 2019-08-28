@@ -1,6 +1,8 @@
 dynlayers
 =========
 
+Generic multi purpose layer infrastructure. can be used everywhere where a layer architekture is needed.
+
 ##dynamic stack
 Depending on the device and the enviroment different layers can be applied. Especially the kind of node, 
 reliant or souvereign, will result in a different layer stack.

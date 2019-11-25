@@ -12,34 +12,31 @@ export { default as Layer }        from './lib/layer.js';
 
 export const service = {
     install() {
-        console.log('** matter install()');
-        myevolux().matter = new Matter();
+        console.log('** layers install()');
+        // myevolux().layers = new ();
     },
 
     uninstall() {
-        console.log('** matter uninstall()');
-        delete myevolux().matter;
+        console.log('** layers uninstall()');
+        // delete myevolux().matter;
     },
 
     resolve() {
-        console.log('** matter resolve()');
+        console.log('** layers resolve()');
         // nothing to do
     },
 
     start() {
-        console.log('** matter start()');
-        myevolux().matter.condense();
+        console.log('** layers start()');
+        // myevolux().matter;
     },
 
     stop() {
-        console.log('** matter stop()');
-        myevolux().matter.freeze();
+        console.log('** layers stop()');
+        // myevolux().matter;
     },
 
     update() {
-        console.log('** matter update()');
-        this.stop();
-        this.uninstall();
-        this.install();
+        console.log('** layers update()');
     }
 };

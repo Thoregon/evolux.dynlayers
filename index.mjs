@@ -8,17 +8,19 @@ import { myevolux }     from '/evolux.universe';
 
 //**** now define all standard exports
 
-export { default as Layer }        from './lib/layer.js';
+import Layers           from "./lib/layers.mjs";
 
 export const service = {
     install() {
         console.log('** layers install()');
-        // myevolux().layers = new ();
+        const layers = new Layers();
+        myevolux().layers = layers;
     },
 
     uninstall() {
         console.log('** layers uninstall()');
-        // delete myevolux().matter;
+        const layers = myevolux().layers;
+        delete myevolux().layers;
     },
 
     resolve() {
@@ -28,12 +30,14 @@ export const service = {
 
     start() {
         console.log('** layers start()');
-        // myevolux().matter;
+        const layers = myevolux().layers;
+        layers.init();
     },
 
     stop() {
         console.log('** layers stop()');
-        // myevolux().matter;
+        const layers = myevolux().layers;
+        layers.exit();
     },
 
     update() {

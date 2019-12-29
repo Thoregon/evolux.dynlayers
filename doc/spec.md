@@ -23,6 +23,22 @@ Allows creation of arbitrarily structured middleware.
 Depending on the device and the environment different layers can be applied. Especially the kind of node, 
 reliant or sovereign, will result in a different layer stack.
 
+````js
+const layers = universe.evolux.layers;
+const builder = layers.builder;
+
+const eventstore = builder.name('EventStore')
+     .
+
+    .build();
+
+const snapstots = builder.name('Snapshots')
+     .
+
+    .build();
+
+````
+
 ##dynamic routing
 Depending on the command/action and the target, the routing thru the layers can be adopted.
 E.g. for different kind of data, entities, log or stream data, different (persistence) DB's can

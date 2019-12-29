@@ -5,10 +5,13 @@
  */
 
 import { myevolux }     from '/evolux.universe';
+import Layers           from './lib/layers.mjs';
 
 //**** now define all standard exports
-
-import Layers           from "./lib/layers.mjs";
+export { default as Layers }    from './lib/layers.mjs';
+export { default as Step }      from './lib/routing/step.mjs';
+export { default as Parallel }  from './lib/routing/parallel.mjs';
+export { default as Switch }    from './lib/routing/switch.mjs';
 
 export const service = {
     install() {

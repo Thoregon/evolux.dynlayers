@@ -4,7 +4,7 @@
  * @author: Bernhard Lukassen
  */
 
-import { myuniverse, myevolux } from '/evolux.universe';
+import { myuniverse, tservices } from '/evolux.universe';
 import Layers                   from './lib/layers.mjs';
 
 //**** now define all standard exports
@@ -17,13 +17,13 @@ export const service = {
     install() {
         myuniverse().logger.debug('** layers install()');
         const layers = new Layers();
-        myevolux().layers = layers;
+        tservices().layers = layers;
     },
 
     uninstall() {
         myuniverse().logger.debug('** layers uninstall()');
-        const layers = myevolux().layers;
-        delete myevolux().layers;
+        const layers = tservices().layers;
+        delete tservices().layers;
     },
 
     resolve() {
@@ -33,13 +33,13 @@ export const service = {
 
     start() {
         myuniverse().logger.debug('** layers start()');
-        const layers = myevolux().layers;
+        const layers = tservices().layers;
         layers.init();
     },
 
     stop() {
         myuniverse().logger.debug('** layers stop()');
-        const layers = myevolux().layers;
+        const layers = tservices().layers;
         layers.exit();
     },
 

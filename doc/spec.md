@@ -24,7 +24,7 @@ Depending on the device and the environment different layers can be applied. Esp
 reliant or sovereign, will result in a different layer stack.
 
 ````js
-const layers = universe.evolux.layers;
+const layers = universe.services.layers;
 const builder = layers.builder;
 
 const eventstore = builder.name('EventStore')

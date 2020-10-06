@@ -4,7 +4,7 @@
  * @author: Bernhard Lukassen
  */
 
-import { myuniverse, tservices } from '/evolux.universe';
+import { tservices }            from '/evolux.universe';
 import Layers                   from './lib/layers.mjs';
 
 // **** now define all standard exports
@@ -22,35 +22,35 @@ export { default as MonitorLayer }  from './lib/util/monitorlayer.mjs';
 
 export const service = {
     install() {
-        myuniverse().logger.debug('** layers install()');
+        universe.logger.debug('** layers install()');
         const layers = new Layers();
         tservices().layers = layers;
     },
 
     uninstall() {
-        myuniverse().logger.debug('** layers uninstall()');
+        universe.logger.debug('** layers uninstall()');
         const layers = tservices().layers;
         delete tservices().layers;
     },
 
     resolve() {
-        myuniverse().logger.debug('** layers resolve()');
+        universe.logger.debug('** layers resolve()');
         // nothing to do
     },
 
     start() {
-        myuniverse().logger.debug('** layers start()');
+        universe.logger.debug('** layers start()');
         const layers = tservices().layers;
         layers.init();
     },
 
     stop() {
-        myuniverse().logger.debug('** layers stop()');
+        universe.logger.debug('** layers stop()');
         const layers = tservices().layers;
         layers.exit();
     },
 
     update() {
-        myuniverse().logger.debug('** layers update()');
+        universe.logger.debug('** layers update()');
     }
 };
